@@ -14,13 +14,7 @@ public class Programming {
                 JOptionPane.DEFAULT_OPTION,
                 JOptionPane.ERROR_MESSAGE,
                 null,
-                options,options[0]);
-
-
-
-
-
-
-
+                options,
+                options[0]);
     }
 } // End
