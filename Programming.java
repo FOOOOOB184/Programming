@@ -1,11 +1,12 @@
+public class Programming {
+    public static void main(String[] args) {
+        String a = "cool";
+        System.out.println(a);
+
+        if (a == "cool") {
+            System.out.println(a);
+        }
 
 
-public class Main{
-public static void main(String[]args){
-System.out.println("Cool");
-
-  
-}
-
-
+    }
 } // End
