@@ -28,7 +28,6 @@ public class Programming {
             }
         }
 
-        JOptionPane.showMessageDialog(null, "Hello " + name + ",\nL'ets begin your Adventure!");
 
         JOptionPane.showMessageDialog(null,
                 "Your Gold = " + Gold + ",\nYour HP = " + HP + ",\nYour Weapon = " + weapon + ".");
@@ -110,7 +109,7 @@ public class Programming {
 
     public static void Tavern(){
 
-   JOptionPane.showMessageDialog(null,"You are in a tavern now...");
+   JOptionPane.showMessageDialog(null,"You walk into the tavern ");
 
     } // End of the Tavern Method
 
