@@ -109,7 +109,12 @@ public class Programming {
 
     public static void Tavern(){
 
-   JOptionPane.showMessageDialog(null,"You walk into the tavern ");
+
+   JOptionPane.showMessageDialog(null,"You walk into the tavern.");
+        Object[] Fight = {"Join the 2 people.", "Join the 1 person.","Ignore everything"};
+
+
+
 
     } // End of the Tavern Method
 
