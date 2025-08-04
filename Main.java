@@ -38,6 +38,8 @@ import javax.swing.*;
                case '-': Correct = R1-R2; break;
                case '*': Correct = R1*R2; break;
                case '/': Correct = R1/R2; break;
+               case '%': Correct = R1%R2; break;
+
            } //End of the switch(Simbol)
 
            if (userResponceInt==Correct){
@@ -59,15 +61,15 @@ import javax.swing.*;
 
         public static char Find_Char(){
 
-            int R = (int) (Math.random()*4);
+            int R = (int) (Math.random()*5);
             char ops = '/';
 
             switch (R) {
-
                 case 0: ops = '+'; break;
                 case 1: ops = '-'; break;
                 case 2: ops = '*'; break;
-                default: ops = '/'; break;
+                case 3: ops = '/'; break;
+                default: ops = '%'; break;
             }
             return ops;
         } //End of the Find_int method
