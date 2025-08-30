@@ -5,18 +5,44 @@
     public class Learning_AI {
 
     public static int Power_Favor = 0;
-
+    public static int Score=0;
         public static void main(String[]args){
+            int userResponce;
+            int Random;
+            int PvP;
+            String W="ERROR if you are seeing this message then This code does not work!!!";
+            Boolean is_Fun=true;
 
-            int userResponce = askUser(0);
-            int Random = CPU_Choice();
-            Result(userResponce,Random);
+            while (is_Fun) {
+                userResponce = askUser(0);
+                if (userResponce==3 || userResponce==-1) {is_Fun=false;}
+
+                if (is_Fun==true) {
+                    Random = CPU_Choice();
+                    PvP = Result(userResponce, Random);
+                    switch (PvP) {
+                        case 0:
+                            W = "The outcome was a Draw.";
+                            break;
+                        case 1:
+                            W = "congratulations you Win!!!";
+                            Score++;
+                            break;
+                        case -1:
+                            W = "You Lose\nBetter Luck Next Time:(";
+                            Score = Score - 1;
+                            break;
+                    }
+                    JOptionPane.showMessageDialog(null, W + "\nYour current Score is " + Score + ".");
+                } else {JOptionPane.showMessageDialog(null,"OK bye then :)\n\nYour Final Score is: " +Score);}
+
+            }
 
 
     } //End of String[]
 
         public static int askUser(int UserRPS){
-        Object RPS[] = {"Rock","Paper","Scissors"};
+        Object RPS[] = {"Rock","Paper","Scissors","Quit Game"};
         UserRPS = JOptionPane.showOptionDialog(null,
                 "Pick one",
                 "Interactions Pane",
@@ -53,10 +79,6 @@
         } //End of the CPU Choice Method
 
         public static int Result(int Player,int Robot) {
-
-
-
-
 
 
             int Winner = 0;
@@ -100,8 +122,22 @@
                 }
             }
 
+
+            switch (Player) {
+                case 1 : Power_Favor=Power_Favor-1;
+                case 2 : Power_Favor=Power_Favor+1;
+            }
+            if (Power_Favor<-2) {Power_Favor=-2;}
+            if (Power_Favor>2) {Power_Favor=2;}
+
             return Winner;
         } //End of Result Method
+
+
+
+
+
+
 
 
         } //End of class
